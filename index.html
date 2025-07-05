@@ -6,32 +6,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-
-    <div class="tops">
+    <!-- Header -->
+    <!-- Brand logo left side options -->
+    <header class="header">
 
         <a href="index.html">
-            <div class="logo1"> <img src="2nd.png" height="80px" alt=""> <span class="brand">airbnb</span> </div>
+            <div class="logo1"> <img src="2nd.png" height="50px" alt=""> <span class="brand">airbnb</span> </div>
         </a>
+
 
         <a href="">
-            <div class="topc">
-                <span class="logo">Any Where <img src="home.webp" alt="" height="35px">| </span>
-                <span class="logo">Any Time <img src="ballon.webp" alt="" height="35px">|</span>
-                <span class="logo">Add Guest <img src="search.webp" alt="" height="35px"></span>
+            <!-- expanded options -->
+            <span class="topc">
+                <span class="none">
+                    <div><video class="house" src="house.mp4" autoplay alt="" height="90px"
+                            style="border-bottom: 5px solid black; :;"></video></div>
+                    <div class="logoh"
+                        style="border-bottom: 5px solid black; position: relative; border-bottom:6px; border-bottom: 5px solid black;margin-top:50px;padding-bottom: 22px;">
+                        Homes
+                    </div>
+                    <div> <video class="vdo" src="balloon.mp4" autoplay alt="" height="90px"></video></div>
+                    <div class="logof" style="font-weight: 100; margin-top: 15px;">Experiences</div>
+                    <div> <video class="vdo" src="consierge-twirl.mp4" autoplay alt="" height="90px"></video></div>
+                    <div class="logof" style="font-weight: 100;margin-top: 15px; "> Services</div>
+                </span>
+            </span>
+            <!-- Shrunk Options -->
+            <div class="scroll">
+                <div><img height="55px" src="h.png" alt=""></div>
+                <div style="border-right: 1px solid rgb(202, 202, 202); margin-right: 20px; padding-right: 12px;">
+                    Anywhere</div>
+                <div style="border-right: 1px solid rgb(202, 202, 202); margin-right: -12px; padding-right: 10px;">
+                    Anytime</div>
+                <div>Addquests</div>
+                <div><img style="background-color: red; border-radius: 100px;" src="sa.png" height="40px" alt=""></div>
             </div>
-        </a>
+            <!-- Right side options -->
+            <div class="logo">
+                <div class="h"><a href="">Become a Host</a></div><a href=""><img class="icon" src="image.png"
+                        height="30px" alt="">
+                    <a href=""> <img class="icon" src="12.png" height="30px" alt=""></a>
+                    <!-- last of header -->
+                    <div class="topl">
+                        <div class="a">
+                            <span>Where</span>
 
-        <div class="logo"> <a href=""><span class="h">Become a Host</span></a><a href=""><img class="icon"
-                    src="image.png" height="30px" alt="" >
-                <a href=""><img class="icon" src="12.png" height="30px" alt=""></a>
+                            <p>Search destination </p>
+                        </div>
+                        <div class="b">
+                            <span>Check in</span>
 
-        </div>
+                            <p>Add dates </p>
+                        </div>
+                        <div class="c">
+                            <span>Check out</span>
+
+                            <p>Add dates</p>
+                        </div>
+                        <div class="d">
+                            <span>Who</span>
+
+                            <p>Add guests</p>
+                        </div>
+                        <div class="e">
+                            <p><img style="background-color: red; border-radius: 100px;" src="sa.png" height="60px"
+                                    alt="">
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="res">
+                        <span>
+                            <div><video src="house.mp4" height="20px"></video></div>Houses<div></div>
+                        </span>
+                    </div>
+    </header>
+    <div class="header2">
+       <center> <div class="f">Start Your Search</div></center>
+        <div class="c2">
+            <span class="b2">
+                <div><video class="v2" src="house.mp4" height="20px"></video></div>
+                <div class="t">Homes</div>
+            </span>
+         <span class="b2">
+            <div><video class="v" src="balloon.mp4"></video>
+                <div class="t1">Experiences</div>
+            </div>
+        </span>
+        <span class="b2">
+            <div><video class="v2" src="consierge-twirl.mp4"></video>
+                <div></div class="t1">Services
+            </div>
+        </span>
+    </div>
+    <script>
+        const header = document.querySelector(".header");
+        const topl = document.querySelector(".topl");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) {
+                header.classList.add("shrink");
+                topl.classList.add("hide");
+            } else {
+                header.classList.remove("shrink");
+                topl.classList.remove("hide");
+            }
+        });
+    </script>
+
+
 
     </div><br><br>
-   <a href=""> <h1>Popular homes in Islamabad  ></h1></a>
+    <a href="/Dark/Night.html"><button class="btn">Dark Mode</button></a>
+    <a href="">
+
+
+        <h1>Popular homes in Islamabad ></h1>
+    </a>
     <br>
     <main class="container">
 
@@ -53,8 +150,7 @@
         ">
                 <p class="flyp">Guest favorite</p>
                 <img class="imgf" src="Copilot_20250619_203320.png" alt=""><img class="img"
-                    src="https://a0.muscache.com/im/pictures/376bced5-371c-41f4-949d-4ca4c135f909.jpg?im_w=480"
-                    alt="">
+                    src="https://a0.muscache.com/im/pictures/376bced5-371c-41f4-949d-4ca4c135f909.jpg?im_w=480" alt="">
                 <b>
                     <p>Guest suite in Islamabad</p>
                 </b>
@@ -89,8 +185,7 @@
         ">
                 <p class="flyp">Guest favorite</p>
                 <img class="imgf" src="Copilot_20250619_203320.png" alt=""><img class="img"
-                    src="https://a0.muscache.com/im/pictures/8faf0783-e210-4f08-a869-e793440f5c97.jpg?im_w=480"
-                    alt="">
+                    src="https://a0.muscache.com/im/pictures/8faf0783-e210-4f08-a869-e793440f5c97.jpg?im_w=480" alt="">
                 <b>
                     <p>Home in Islamabad</p>
                 </b>
@@ -118,16 +213,18 @@
                 <b>
                     <p>Condo in Islamabad</p>
                 </b>
-                <p class="lightp">$69 for 2 nights ★ 5.0</p> 
+                <p class="lightp">$69 for 2 nights ★ 5.0</p>
             </div>
         </a>
 
     </main>
     <br>
-<br>
-   <a href=""> <h1>Available next month in Lahore ></h1></a>
     <br>
-  <main class="container">
+    <a href="">
+        <h1>Available next month in Lahore ></h1>
+    </a>
+    <br>
+    <main class="container">
 
 
         <a href="">
@@ -212,14 +309,16 @@
                 <b>
                     <p>Apartment in Lahore</p>
                 </b>
-                <p class="lightp">$90 for 2 nights ★ 4.03</p> 
+                <p class="lightp">$90 for 2 nights ★ 4.03</p>
             </div>
         </a>
 
     </main> <br><br>
-    <a href=""><h1>Stay in Kuala Lumpur ></h1></a>
+    <a href="">
+        <h1>Stay in Kuala Lumpur ></h1>
+    </a>
     <br>
-    <main class="container" >
+    <main class="container">
 
 
         <a href="">
@@ -227,8 +326,7 @@
         ">
                 <p class="flyp">Guest favorite</p>
                 <img class="imgf" src="Copilot_20250619_203320.png" alt=""><img class="img"
-                    src="https://a0.muscache.com/im/pictures/db93687b-77c5-4168-ba64-6a9a2501eea0.jpg?im_w=1200"
-                    alt="">
+                    src="https://a0.muscache.com/im/pictures/db93687b-77c5-4168-ba64-6a9a2501eea0.jpg?im_w=1200" alt="">
                 <b>
                     <p>Apartment in Bukit Bintang</p>
                 </b>
@@ -239,8 +337,7 @@
         ">
                 <p class="flyp">Guest favorite</p>
                 <img class="imgf" src="Copilot_20250619_203320.png" alt=""><img class="img"
-                    src="https://a0.muscache.com/im/pictures/93f9feea-82c8-4537-bfad-3bda8e479333.jpg?im_w=480"
-                    alt="">
+                    src="https://a0.muscache.com/im/pictures/93f9feea-82c8-4537-bfad-3bda8e479333.jpg?im_w=480" alt="">
                 <b>
                     <p>Apartment in Bukit Bintang</p>
                 </b>
@@ -304,12 +401,14 @@
                 <b>
                     <p>Condo in Setiawangsa</p>
                 </b>
-                <p class="lightp">$101 for 2 nights ★ 5.0</p> 
+                <p class="lightp">$101 for 2 nights ★ 5.0</p>
             </div>
         </a>
 
     </main><br><br>
-   <a href=""> <h1>Rooms in USA ></h1></a>
+    <a href="">
+        <h1>Rooms in USA ></h1>
+    </a>
     <br>
     <main class="container" style="flex-direction: row-reverse;">
 
@@ -331,8 +430,7 @@
         ">
                 <p class="flyp">Guest favorite</p>
                 <img class="imgf" src="Copilot_20250619_203320.png" alt=""><img class="img"
-                    src="https://a0.muscache.com/im/pictures/376bced5-371c-41f4-949d-4ca4c135f909.jpg?im_w=480"
-                    alt="">
+                    src="https://a0.muscache.com/im/pictures/376bced5-371c-41f4-949d-4ca4c135f909.jpg?im_w=480" alt="">
                 <b>
                     <p>Guest suite in USA</p>
                 </b>
@@ -367,8 +465,7 @@
         ">
                 <p class="flyp">Guest favorite</p>
                 <img class="imgf" src="Copilot_20250619_203320.png" alt=""><img class="img"
-                    src="https://a0.muscache.com/im/pictures/8faf0783-e210-4f08-a869-e793440f5c97.jpg?im_w=480"
-                    alt="">
+                    src="https://a0.muscache.com/im/pictures/8faf0783-e210-4f08-a869-e793440f5c97.jpg?im_w=480" alt="">
                 <b>
                     <p>Home in USA</p>
                 </b>
@@ -396,16 +493,18 @@
                 <b>
                     <p>Condo in USA</p>
                 </b>
-                <p class="lightp">$69 for 2 nights ★ 5.0</p> 
+                <p class="lightp">$69 for 2 nights ★ 5.0</p>
             </div>
         </a>
 
     </main>
     <br>
-<br>
-   <a href=""> <h1>Next month in Russia ></h1></a>
     <br>
-  <main class="container" style="flex-direction: row-reverse;">
+    <a href="">
+        <h1>Next month in Russia ></h1>
+    </a>
+    <br>
+    <main class="container" style="flex-direction: row-reverse;">
 
 
         <a href="">
@@ -490,12 +589,14 @@
                 <b>
                     <p>Apartment in Russia</p>
                 </b>
-                <p class="lightp">$90 for 2 nights ★ 4.03</p> 
+                <p class="lightp">$90 for 2 nights ★ 4.03</p>
             </div>
         </a>
 
     </main> <br><br>
-    <a href=""><h1>Stay in Kuala Lumpur ></h1></a>
+    <a href="">
+        <h1>Stay in Kuala Lumpur ></h1>
+    </a>
     <br>
     <main class="container" style="flex-direction: row-reverse;">
 
@@ -505,8 +606,7 @@
         ">
                 <p class="flyp">Guest favorite</p>
                 <img class="imgf" src="Copilot_20250619_203320.png" alt=""><img class="img"
-                    src="https://a0.muscache.com/im/pictures/db93687b-77c5-4168-ba64-6a9a2501eea0.jpg?im_w=1200"
-                    alt="">
+                    src="https://a0.muscache.com/im/pictures/db93687b-77c5-4168-ba64-6a9a2501eea0.jpg?im_w=1200" alt="">
                 <b>
                     <p>Apartment in Bukit Bintang</p>
                 </b>
@@ -517,8 +617,7 @@
         ">
                 <p class="flyp">Guest favorite</p>
                 <img class="imgf" src="Copilot_20250619_203320.png" alt=""><img class="img"
-                    src="https://a0.muscache.com/im/pictures/93f9feea-82c8-4537-bfad-3bda8e479333.jpg?im_w=480"
-                    alt="">
+                    src="https://a0.muscache.com/im/pictures/93f9feea-82c8-4537-bfad-3bda8e479333.jpg?im_w=480" alt="">
                 <b>
                     <p>Apartment in Bukit Bintang</p>
                 </b>
@@ -573,128 +672,98 @@
                 <p class="lightp">$65 for 2 nights ★ 4.92</p>
             </div>
         </a><a href="">
-            <div class="card
-        ">
-                <p class="flyp">Guest favorite</p>
-                <img class="imgf" src="Copilot_20250619_203320.png" alt=""><img class="img"
-                    src="https://a0.muscache.com/im/pictures/miso/Hosting-1421345864638611736/original/89509a30-3b29-4435-b6eb-0236f26a85ef.jpeg?im_w=480"
-                    alt="">
-                <b>
-                    <p>Condo in Setiawangsa</p>
-                </b>
-                <p class="lightp">$101 for 2 nights ★ 5.0</p> 
-            </div>
+            <div class="card">
+                <div>
+
+
+
+                    <!-- <img class="imgf" src="Copilot_20250619_203320.png" alt=""> -->
+                    <img class="img"
+                        src="https://a0.muscache.com/im/pictures/miso/Hosting-1421345864638611736/original/89509a30-3b29-4435-b6eb-0236f26a85ef.jpeg?im_w=480"
+                        alt="">
+                    <b>
+                        <p>Condo in Setiawangsa</p>
+                    </b>
+                    <p class="lightp">$101 for 2 nights ★ 5.0</p>
+                </div>
         </a>
 
     </main>
-    <footer>
-  <style>
-   <footer>
-  <style>
-    footer {
-      font-family: Arial, sans-serif;
-      border-top: 1px solid #ccc;
-      padding: 40px 20px;
-      background-color: #fff;
-      color: #222;
-    }
+    <footer class="footer">
+        <div class="footer-sections">
+            <div class="footer-category">
+                <h4>Unique stays</h4>
+                <ul>
+                    <li>Cabins</li>
+                    <li>Treehouses</li>
+                    <li>Lakehouses</li>
+                    <li>Private Island Rentals</li>
+                    <li>Farm Houses</li>
+                </ul>
+            </div>
+            <div class="footer-category">
+                <h4>Travel tips & inspiration</h4>
+                <ul>
+                    <li>Glamping</li>
+                    <li>Yurt Rentals</li>
+                    <li>Farm Cottages</li>
+                    <li>Castle Rentals</li>
+                    <li>Luxury Cabins</li>
+                </ul>
+            </div>
+            <div class="footer-category">
+                <h4>Airbnb-friendly apartments</h4>
+                <ul>
+                    <li>Tiny Houses</li>
+                    <li>Beach Houses</li>
+                    <li>Houseboats</li>
+                    <li>Cabin Rentals</li>
+                    <li>Show more</li>
+                </ul>
+            </div>
+        </div>
 
-    .footer-container {width:100%;
-      display: flex;
-      
-      justify-content: space-between;
-      max-width: 1200px;
-      
-      gap: 60px;
-    }
+        <hr />
 
-    .footer-section {
-      
-      
+        <div class="footer-links">
+            <div>
+                <h5>Support</h5>
+                <ul>
+                    <li>Help Center</li>
+                    <li>AirCover</li>
+                    <li>Disability support</li>
+                    <li>Cancellation options</li>
+                </ul>
+            </div>
+            <div>
+                <h5>Hosting</h5>
+                <ul>
+                    <li>Airbnb your home</li>
+                    <li>AirCover for Hosts</li>
+                    <li>Community forum</li>
+                    <li>Join a host class</li>
+                </ul>
+            </div>
+            <div>
+                <h5>Airbnb</h5>
+                <ul>
+                    <li>Newsroom</li>
+                    <li>Careers</li>
+                    <li>Investors</li>
+                    <li>Gift cards</li>
+                </ul>
+            </div>
+        </div>
 
-    }
-
-    .footer-section h4 {
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .footer-section ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .footer-section ul li {
-      margin-bottom: 8px;
-    }
-
-    .footer-section ul li a {
-      text-decoration: none;
-      color: #333;
-      transition: color 0.3s;
-    }
-
-    .footer-section ul li a:hover {
-      color: #000;
-    }
-
-    @media (max-width: 768px) {
-      .footer-container {
-        flex-direction: column;
-        padding: 0 10px;
-      }
-
-      .footer-section {
-        margin: 20px 0;
-      }
-    }
-  </style>
-<br> <br>
-  <div class="footer-container"  style="font-size: 20px; background-color: rgb(243, 238, 230); background-size: contain;" >
-    
-    <div class="footer-section">
-      <h4>Support</h4>
-      <ul>
-        <li><a href="#">Help Center</a></li>
-        <li><a href="#">AirCover</a></li>
-        <li><a href="#">Anti-discrimination</a></li>
-        <li><a href="#">Disability support</a></li>
-        <li><a href="#">Cancellation options</a></li>
-        <li><a href="#">Report neighborhood concern</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-section">
-      <h4>Hosting</h4>
-      <ul>
-        <li><a href="#">Airbnb your home</a></li>
-        <li><a href="#">AirCover for Hosts</a></li>
-        <li><a href="#">Hosting resources</a></li>
-        <li><a href="#">Community forum</a></li>
-        <li><a href="#">Hosting responsibly</a></li>
-        <li><a href="#">Airbnb-friendly apartments</a></li>
-        <li><a href="#">Join a free Hosting class</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-section">
-      <h4>Airbnb</h4>
-      <ul>
-        <li><a href="#">2025 Summer Release</a></li>
-        <li><a href="#">Newsroom</a></li>
-        <li><a href="#">New features</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Investors</a></li>
-        <li><a href="#">Gift cards</a></li>
-        <li><a href="#">Airbnb.org emergency stays</a></li>
-      </ul>
-    </div>
-  </div>
-  <p>© 2025 Airbnb, Inc.·TermsSitemapPrivacyYour Privacy Choices
-</p>
-<p></p>
-</footer>
-
+        <div class="footer-bottom">
+            <p>© 2025 Airbnb, Inc. · Terms · Sitemap · Privacy · Your Privacy Choices</p>
+            <div class="footer-bottom-right">
+                <span>🌐 English (US)</span>
+                <span>💲 USD</span>
+                <span>📱 Social Icons</span>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
